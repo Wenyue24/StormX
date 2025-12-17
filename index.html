@@ -67,14 +67,23 @@
 </head>
 
 <body>
-<div class="layout">
-  <div class="sidebar">
-    <h1 class="title">CliAda_Storm_IDFs Service (Beijing demo) <span class="pill">Interactive Demo</span></h1>
-    <p class="sub">
-      This service provides <b>present-day</b> and <b>future</b> IDF curves at both <b>station</b> and <b>area</b> scales,
-      enabling engineers, insurers, and planners to apply climate-conditioned design storms in practice.
-      It also delivers <b>long-term gridded rainfall datasets</b> for flood-risk assessment and climate-resilient infrastructure design.
-    </p>
+  <div class="layout">
+    <div class="sidebar">
+      <h1 class="title">
+        StormX (Beijing demo)
+        <span class="pill">Interactive Demo</span>
+      </h1>
+
+      <p class="sub">
+        <strong>StormX</strong> delivers climate-conditioned
+        <b>Intensity–Duration–Frequency (IDF)</b> curves for both current and future warming scenarios
+        at <b>station</b> and <b>area</b> scales.
+        In addition, it provides <b>long-term, high-resolution gridded rainfall datasets</b>
+        derived from observations and future projections.
+        The service enables engineers, insurers, and planners to directly apply
+        climate-adaptive design storms in practice, supporting robust flood-risk
+        assessment and climate-resilient infrastructure planning.
+      </p>
 
     <div class="grid">
       <div class="row2">
@@ -82,7 +91,7 @@
           Spatial scale
           <select id="scaleMode">
             <option value="point" selected>Point (station / click)</option>
-            <option value="area">Area (polygon average)</option>
+            <option value="area">Area (polygon / draw)</option>
           </select>
         </label>
 
@@ -99,7 +108,7 @@
         <label>
           Climate scenario
           <select id="scenario">
-            <option value="current" selected>Present-day climate</option>
+            <option value="current" selected>Current climate</option>
             <option value="plus2">Warming +2°C</option>
           </select>
         </label>
@@ -110,8 +119,8 @@
             <option value="curve" selected>IDF curve by return period (single duration)</option>
             <option value="matrix">IDF table: durations × return periods</option>
             <option value="change">Future change: Δ% (+2°C vs present) by return period (single duration)</option>
+			<option value="vpi_events">VIP download: storm event sets (uncertainty-conditioned IDF)</option>
             <option value="vpi_ts">VIP download: rainfall time series (present & +2°C)</option>
-            <option value="vpi_events">VIP download: storm event set (uncertainty-conditioned IDF)</option>
           </select>
         </label>
       </div>
